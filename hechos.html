@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Facts</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+      <a class="navbar-brand" href="index.html"
+        ><img
+          src="https://img.pngio.com/apiswhat-how-and-why-now-first-rate-apis-png-768_768.png"
+          width="80px"
+          height="auto"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse text-center"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="amorCalc.html">Love Calculator</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="hechos.html">Facts</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="caraCruz.html">Heads or Tails</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gatos.html">Cats</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="lyrics.html">Lyrics of Sia</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- CUERPO, FALTA HEADER Y FOOTER -->
+    <div class="container" id="app">
+      <div class="mt-5 row text-center">
+        <div class="col">
+            <h3>Give me a Fact</h3>
+        </div>
+      </div>
+
+      <form>
+        <div class="row text-center">
+          <div class="col-6">
+            Day
+            <br />
+            <input
+              type="number"
+              ref="dia"
+              min="1"
+              max="31"
+              value="1"
+              required
+            />
+          </div>
+          <div class="col">
+            Month
+            <br />
+            <input
+              type="number"
+              ref="mes"
+              min="1"
+              max="12"
+              value="1"
+              required
+            />
+          </div>
+          <button class="btn btn-primary" @click.prevent="dameHechos()">Give me a fact</button>
+        </div>
+      </form>
+      <hr />
+      <div class="row">
+        <div class="col text-center">
+          <h1>{{ hechos.year }}</h1>
+          <h3 class="text-primary">{{ hechos.text | uppercase }}</h3>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="hechos.js"></script>
+  </body>
+</html>

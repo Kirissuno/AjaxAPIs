@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>VUE - Index</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css"
+    />
+  </head>
+  <body>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+          <a class="navbar-brand" href="index.html"
+            ><img
+              src="https://img.pngio.com/apiswhat-how-and-why-now-first-rate-apis-png-768_768.png"
+              width="80px"
+              height="auto"
+          /></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div
+            class="collapse navbar-collapse text-center"
+            id="navbarSupportedContent"
+          >
+            <ul class="navbar-nav mr-auto ">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="amorCalc.html">Love Calculator</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="hechos.html">Facts</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="caraCruz.html">Heads or Tails</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gatos.html">Cats</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="lyrics.html">Lyrics of Sia</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+    <div class="container" id="app">
+      <h3 class="mt-5 text-center">This is SIA</h3>
+      <div class="row">
+        <div class="col-4 text-center" v-for="cancion in pagina1">
+          <div class="altura">
+            <p class="text-danger font-weight-bold">{{ cancion.full_title }}</p>
+            <img :src="cancion.header_image_thumbnail_url" />
+            <p><a :href="cancion.url">Go to Lyrics</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="vue.js"></script>
+  </body>
+</html>
